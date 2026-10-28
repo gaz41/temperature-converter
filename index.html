@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        <h1>Temperature Converter</h1>
+      </header>
+      <main>
+        <div class="temp-container">
+          <label for="temperature">temperature unit</label>
+          <input
+            type="number"
+            id="temperature"
+            class="temperature"
+            placeholder="Enter temperature"
+          />
+          <div class="unit-container">
+            <label for="unit">convert from temperature scale</label>
+            <select id="unit" class="unit">
+              <option value="Celsius">Celsius &deg;C</option>
+              <option value="Fahrenheit">Fahrenheit &deg;F</option>
+              <option value="Kelvin">Kelvin K</option>
+              <option value="Rankine">Rankine &deg;R</option>
+              <option value="Réaumur">Réaumur &deg;Ré</option>
+              <option value="Delisle">Delisle &deg;De</option>
+              <option value="Rømer">Rømer &deg;Rø</option>
+              <option value="Newton">Newton &deg;N</option>
+            </select>
+          </div>
+
+          <label for="decimalPlace">round (decimal places)</label>
+          <select id="decimalPlace" class="decimal-place" name="decimalPlace">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <label>convert temperature</label>
+          <div id="btnContainer" class="btn-container">
+            <button id="convertBtn">Convert</button>
+            <button id="clearBtn">Clear</button>
+          </div>
+
+          <h2 id="result"></h2>
+        </div>
+
+        <!-- ****** -->
+        <div class="sliding-menu" id="slidingMenu">
+          <h2>Temperature scales</h2>
+          <div class="description">
+            <p>
+              Temperature scales are standardized systems used to measure the
+              intensity of heat, with the three most common being Celsius,
+              Fahrenheit, and Kelvin. Other scales used throughout history
+              include Rankine, Réaumur, Delisle, Rømer and Newton.
+            </p>
+          </div>
+
+          <button class="accordion">Celsius (°C)</button>
+          <div class="panel">
+            <p>
+              Developed by Anders Celsius in 1742, it is the global standard for
+              everyday and standard scientific use. It sets 0°C as the freezing
+              point of pure water and 100°C as the boiling point at standard
+              atmospheric pressure.
+            </p>
+          </div>
+          <button class="accordion">Fahrenheit (°F)</button>
+          <div class="panel">
+            <p>
+              Created by Daniel Gabriel Fahrenheit in 1724, it is primarily used
+              in the United States. It establishes 32°F for water's freezing
+              point and 212°F for its boiling point, dividing the range into
+              exactly 180 equal intervals.
+            </p>
+          </div>
+          <button class="accordion">Kelvin (K)</button>
+          <div class="panel">
+            <p>
+              Proposed by Lord Kelvin in 1848, this is the international
+              standard unit (SI) for scientific thermodynamics. It is an
+              absolute scale starting at 0 K (absolute zero), where all
+              molecular motion ceases, with tick marks equal in size to a
+              Celsius degree.
+            </p>
+          </div>
+          <button class="accordion">Rankine (°R)</button>
+          <div class="panel">
+            <p>
+              Proposed by William John Macquorn Rankine in 1859, this serves as
+              an absolute thermodynamic scale paired with Fahrenheit. It places
+              0°R at absolute zero, but its degree increments are identical in
+              size to a Fahrenheit degree.
+            </p>
+          </div>
+          <button class="accordion">Réaumur (°Ré)</button>
+          <div class="panel">
+            <p>
+              Introduced by René Antoine Ferchault de Réaumur in 1730, this
+              scale was once popular across Europe. It defines 0°Ré as the
+              freezing point of water and 80°Ré as the boiling point, calibrated
+              by the expansion volume of an alcohol-water mixture.
+            </p>
+          </div>
+          <button class="accordion">Delisle (°D)</button>
+          <div class="panel">
+            <p>
+              Created by French astronomer Joseph-Nicolas Delisle in 1732, this
+              is a unique inverted scale. It set 0°D at the boiling point of
+              water and 150°D at the freezing point, meaning the numerical
+              values increase as the environment gets colder
+            </p>
+          </div>
+          <button class="accordion">Rømer (°Rø)</button>
+          <div class="panel">
+            <p>
+              Invented by Danish astronomer Ole Christensen Rømer in 1701, this
+              was one of the earliest calibrated scales. It set 0°Rø using a
+              freezing brine solution and 60°Rø as the boiling point of water,
+              capturing the melting point of pure water at exactly 7.5°Rø
+            </p>
+          </div>
+          <button class="accordion">Newton (°N)</button>
+          <div class="panel">
+            <p>
+              Devised by Sir Isaac Newton around 1701, this scale focused on
+              heat's physical properties. It defined 0°N as the melting point of
+              snow and 33°N as the boiling point of water, making it a precursor
+              to the centigrade concept.
+            </p>
+          </div>
+        </div>
+        <!-- ****** -->
+      </main>
+
+      <!-- copyright info -->
+      <footer>
+        <div id="copy" class="copy"></div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Resources -->
+<!-- https://www.calculatorsoup.com/calculators/conversions/temperature.php -->
+<!-- https://en.wikipedia.org/wiki/Conversion_of_scales_of_temperature -->
+
+<!-- https://en.wikipedia.org/wiki/Scale_of_temperature -->
+<!-- https://www.sciencedirect.com/topics/computer-science/temperature-scale -->
+<!-- https://www.fluoramics.com/understanding-temperature-scales/20/ -->
+<!-- https://www.engr.colostate.edu/~hillger/pdf/Temperature_scales_and_their_inventors.pdf -->

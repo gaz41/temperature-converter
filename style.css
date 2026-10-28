@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font1: "Roboto", sans-serif;
+  --backgroundColor1: #99a3a3;
+  --letterSpacing: 0.7px;
+
+  --tempConvColor1: #111111;
+  --tempConvColor2: #202020;
+  --tempConvColor3: #333333;
+  --tempConvColor4: #666666;
+  --tempConvColor5: #788b8b;
+  --tempConvColor6: #808080;
+  --tempConvColor7: #999999;
+  --tempConvColor8: #aaaaaa;
+  --tempConvColor9: #dda0dd;
+  --tempConvColor10: #cccccc;
+  --tempConvColor11: rgba(0, 0, 0, 0.1);
+  --tempConvColor12: rgba(26, 54, 26, 0.3);
+  --tempConvColor13: rgba(120, 139, 139, 0.3);
+  --tempConvColor14: #4b0082;
+
+  --slideMenuColor1: #111111;
+  --slideMenuColor2: #333333;
+  --slideMenuColor3: #99a3a3;
+  --slideMenuColor4: #788b8b;
+  --slideMenuColor5: #dda0dd;
+
+  --accordionColor1: #b0b0b0;
+  --accordionColor2: #cccccc;
+  --accordionColor3: #d0d0d0;
+  --accordionColor4: #e0e0e0;
+  --accordionColor5: #505050;
+
+  --copyColor1: #99a3a3;
+  --copyColor2: #404040;
+  --copyColor3: #666666;
+  --copyColor4: #808080;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font1);
+  background-color: var(--backgroundColor1);
+  overflow-y: scroll;
+}
+
+.container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-content: center;
+  padding: 0 20px;
+}
+
+h1 {
+  color: var(--tempConvColor1);
+  font-size: 30px;
+  margin: 30px 0 20px 0;
+}
+
+.temp-container {
+  padding: 10px;
+}
+
+label {
+  display: block;
+  color: var(--tempConvColor3);
+  margin-bottom: 4px;
+}
+
+.emptyInputMessage {
+  color: var(--tempConvColor3);
+  font-size: 16px;
+  font-weight: 500;
+  text-wrap: wrap;
+  margin: 30px 0 26px 0;
+  line-height: 22px;
+}
+
+.resultMessage {
+  color: var(--tempConvColor3);
+  font-size: 16px;
+  font-weight: 500;
+  text-wrap: wrap;
+  padding: 36px 0 30px 0;
+}
+
+.tempInput {
+  background-color: var(--tempConvColor13);
+  color: var(--tempConvColor2);
+  text-wrap: nowrap;
+  line-height: 2;
+  padding: 4px 6px;
+  border: 1px solid var(--tempConvColor6);
+}
+
+.unit,
+.decimal-place,
+.temperature {
+  background-color: var(--tempConvColor13);
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 180px;
+  outline: none;
+  border: 1px solid var(--tempConvColor6);
+  cursor: pointer;
+}
+
+.temperature::placeholder {
+  color: var(--tempConvColor14);
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: var(--letterSpacing);
+  opacity: 0.6;
+}
+
+.unit {
+  font-size: 16px;
+  outline: none;
+  letter-spacing: var(--letterSpacing);
+}
+
+.decimal-place {
+  background-color: var(--tempConvColor13);
+  font-size: 15px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.unit option,
+.decimal-place option {
+  background-color: var(--tempConvColor5);
+  color: var(--tempConvColor1);
+}
+
+option:checked,
+.decimal-place:checked {
+  background-color: var(--tempConvColor3);
+  color: var(--tempConvColor10);
+}
+
+.unit:hover,
+.decimal-place:hover,
+.temperature:hover,
+button:hover {
+  box-shadow: 3px 3px 3px var(--tempConvColor12);
+  transition: 0.3s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  background-color: var(--tempConvColor5);
+  color: var(--tempConvColor1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.resultText {
+  color: var(--tempConvColor3);
+  font-size: 16px;
+  margin: 40px 0 10px 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tempConvColor3);
+}
+
+::-webkit-scrollbar-track-piece {
+  background: var(--tempConvColor3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tempConvColor4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tempConvColor4);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--tempConvColor3);
+}
+
+::selection {
+  color: var(--tempConvColor2);
+  background-color: var(--tempConvColor9);
+}
+
+.btn-container {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: var(--tempConvColor5);
+  color: var(--color1);
+  width: 100px;
+  letter-spacing: var(--letterSpacing);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid var(--tempConvColor6);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--tempConvColor13);
+}
+
+.tempIn,
+.tempOut {
+  font-size: 16px;
+  padding: 5px 14px 3px 14px;
+  letter-spacing: var(--letterSpacing);
+}
+
+.tempIn {
+  background-color: var(--tempConvColor3);
+  color: var(--tempConvColor8);
+}
+
+.tempOut {
+  background-color: var(--tempConvColor5);
+  color: var(--tempConvColor2);
+}
+
+.convertedTemp {
+  background-color: var(--tempConvColor13);
+  width: auto;
+  font-size: 16px;
+  color: var(--tempConvColor2);
+  border: 1px solid var(--tempConvColor11);
+  padding: 10px;
+  margin-bottom: 18px;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  background-color: var(--slideMenuColor3);
+  color: var(--slideMenuColor1);
+  padding: 8px 16px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.7s ease;
+}
+
+.menu-toggle:hover {
+  background-color: var(--slideMenuColor4);
+}
+
+.sliding-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--slideMenuColor2);
+  padding: 20px 40px 20px 20px;
+  z-index: 100;
+  transition: right 0.3s ease;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sliding-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.sliding-menu.active {
+  right: 0;
+}
+
+.sliding-menu h2 {
+  color: var(--slideMenuColor5);
+  font-size: 20px;
+  letter-spacing: var(--letterSpacing);
+  margin: 32px 0;
+}
+
+.accordion {
+  font-family: var(--font1);
+  font-size: 16px;
+  width: 100%;
+  background-color: transparent;
+  color: var(--accordionColor1);
+  text-align: left;
+  letter-spacing: var(--letterSpacing);
+  padding: 16px 16px 16px 0;
+  margin: 0;
+  border: none;
+  border-top: 1px solid var(--accordionColor5);
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.accordion:first-of-type {
+  border-top: none;
+}
+
+.accordionActive,
+.accordion:hover {
+  background-color: var(--slideMenuColor2);
+  color: var(--accordionColor4);
+  box-shadow: none;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: var(--accordionColor2);
+  float: right;
+  margin-left: 5px;
+}
+
+.accordionActive:after {
+  content: "\2212";
+}
+
+.panel {
+  background-color: var(--slideMenuColor2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.panel p {
+  font-size: 15px;
+  color: var(--accordionColor1);
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: var(--accordionColor3);
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 30px;
+}
+
+.copy {
+  background-color: var(--copyColor1);
+  color: var(--copyColor2);
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: var(--letterSpacing);
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.copy a {
+  color: var(--copyColor2);
+  text-decoration: underline dotted;
+  text-decoration-color: var(--copyColor3);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 6px;
+}
+
+.copy a:hover {
+  color: var(--copyColor2);
+  text-decoration-color: var(--copyColor4);
+}
+
+hr.line {
+  border: 0;
+  border-top: 1px dotted var(--copyColor2);
+  margin-bottom: 14px;
+}
+
+@media only screen and (max-width: 460px) {
+  h1 {
+    font-size: 24px;
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 398px) {
+  .copy {
+    padding: 6px 0;
+    line-height: 1.6;
+  }
+
+  .copy2 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .copy {
+    padding: 8px 0;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .copy a {
+    text-underline-offset: 4px;
+  }
+
+  .copy2 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .btn-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sliding-menu {
+    right: -220px;
+    width: 220px;
+  }
+}
+
+@media only screen and (max-width: 270px) {
+  h1 {
+    font-size: 26px;
+    margin: 50px 0 20px 0;
+  }
+
+  .unit,
+  .temperature {
+    width: 150px;
+  }
+}
